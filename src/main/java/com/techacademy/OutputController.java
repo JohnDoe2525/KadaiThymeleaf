@@ -11,6 +11,7 @@ public class OutputController {
     @PostMapping("/output")
     public String postOutput(@RequestParam("val") String val,Model model) {
         model.addAttribute("val", val);
+        model.addAttribute("previous", val);
         return "output";
 
     }
